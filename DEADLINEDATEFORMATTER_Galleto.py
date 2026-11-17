@@ -7,10 +7,12 @@ day = int(input("Enter day: "))
 
 formatted_event = event_title.upper()
 
-print("\nOutput:")
+event_date = datetime(year, month, day)
+
+print("\nFormatted Output:")
 print(f"Event: {formatted_event}")
-print(f"Date: {month}/{day}/{year}")
-print(f"Year: {year}")
-print(f"Month: {month}")
-print(f"Day: {day}")
-print("Weekday: null (cannot be done without datetime functions)")
+print(f"Date: {event_date.strftime("%B %d, %Y")}")
+print(f"Year: {event_date.strftime("%Y")}")
+print(f"Month: {event_date.strftime("%m")}")
+print(f"Day: {event_date.strftime("%d")}")
+print(f"Weekday: {event_date.strftime("%A")}")
